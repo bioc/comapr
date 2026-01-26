@@ -9,10 +9,10 @@ test_that("Plot missing GT works", {
   p3 <- plotMissingGT(cr_geno,plot_type = "bar", plot_wg = "TRUE")
   p4 <- plotMissingGT(cr_geno,plot_wg = "TRUE")
 
-  expect_true(class(p1)[1] == 'gg')
-  expect_true(class(p2)[2] == 'ggplot')
-  expect_true(class(p3)[2] == 'ggplot')
-  expect_true(class(p4)[1] == 'gg')
+  expect_true('ggplot' %in% class(p1))
+  expect_true('ggplot' %in% class(p2))
+  expect_true('ggplot' %in% class(p3))
+  expect_true('ggplot' %in% class(p4))
 
 
 })
